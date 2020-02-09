@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="АКС - провайдер высокоскоростного интернета и ИТ-услуг">
+
+    <title>АКС</title>
+
+    <base href="/">
+
+    <link rel="icon" href="images/manifest/favicon.ico">
+
+    <!-- https://goo.gl/OOhYW5 -->
+    <link rel="manifest" href="manifest.json">
+    <!-- https://goo.gl/qRE0vM -->
+    <meta name="theme-color" content="#3f51b5">
+
+    <!-- Add to homescreen for Chrome on Android. Fallback for manifest.json -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="АКС">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="АКС">
+
+    <!-- Homescreen icons -->
+    <link rel="apple-touch-icon" href="images/manifest/icon-48x48.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/manifest/icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="96x96" href="images/manifest/icon-96x96.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/manifest/icon-144x144.png">
+    <!-- <link rel="apple-touch-icon" sizes="192x192" href="images/manifest/icon-192x192.png"> -->
+
+    <!-- Tile icon for Windows 8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="images/manifest/icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#3f51b5">
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <!-- Default twitter cards -->
+    <meta name="twitter:card" content="АКС">
+    <meta name="twitter:site" content="@акс">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="АКС">
+    <meta property="og:image" content="images/manifest/icon-144x144.png" />
+
+    <!-- Performance tip: hint to the browser to start the handshake for the fonts site -->
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <!-- <script>
+      // Load and register pre-caching Service Worker
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('service-worker.js', {
+            scope: '/',
+          });
+        });
+      }
+    </script> -->
+
+    <!-- Load webcomponents-loader.js to check and load any polyfills your browser needs -->
+    <!-- <script src="node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script> -->
+
+    <style>
+      @font-face {
+        font-family: "Mono Regular";
+        src:  url("/fonts/JetBrainsMono/woff2/JetBrainsMono-Regular.woff2") format("woff2"),
+              url("/fonts/JetBrainsMono/woff/JetBrainsMono-Regular.woff") format("woff");
+      }
+      @font-face {
+        font-family: "Mono Bold";
+        src: url("/fonts/JetBrainsMono/woff2/JetBrainsMono-ExtraBold.woff2") format("woff2"),
+              url("/fonts/JetBrainsMono/woff/JetBrainsMono-ExtraBold.woff") format("woff");
+      }
+      @font-face {
+        font-family: "Micra";
+        src:  url("/fonts/micra.ttf");
+      }
+      @font-face {
+        font-family: "Domkrat";
+        src: url("/fonts/domkrat.ttf");
+      }
+      @font-face {
+        font-family: "Marmelad";
+        src: url("/fonts/marmelad.ttf");
+      }
+      @font-face {
+        font-family: "Continuum";
+        src: url("/fonts/continuum.ttf");
+      }
+      @font-face {
+        font-family: "Play Bold";
+        src: url("/fonts/play-bold.ttf");
+      }
+      @font-face {
+        font-family: "Play Regular";
+        src: url("/fonts/play-regular.ttf");
+      }
+      body,html {
+        margin: 0;
+        padding: 0;
+        -webkit-font-smoothing: antialiased;
+        z-index: -1;
+        font: var(--font);
+        color: var(--color);
+        background-color: var(--background-color);
+      }
+      :root {
+        --color: #fff;
+        --primary-color: #1867c0;
+        --primary-color-variant: #3700b3;
+        --secondary-color: #03dac6;
+        --secondary-color-variant: #018786;
+        --error-color: #cf6679;
+
+        --background: url(/images/backgrounds/fiber.jpg) center / cover no-repeat fixed;
+        --background-color: #263238;
+        --border-color: rgba(0, 0, 0, 0.12);
+        --border-radius: 0.25rem;
+
+        --font-family-mono-regular: "Mono Regular", serif;
+        --font-family-mono-bold: "Mono Bold", serif;
+        --font-family-micra: "Micra", serif;
+        --font-family-continuum: "Continuum", serif;
+        --font-family-domkrat: "Domkrat", serif;
+        --font-family-marmelad: "Marmelad", serif;
+        --font-family-play-bold: "Play Bold", serif;
+        --font-family-play-regular: "Play Regular", serif;
+
+        --font-family-header: var(--font-family-micra);
+
+        --font: normal 13pt var(--font-family-mono-regular);
+      }
+
+    </style>
+    <script type="module" src="/src/akc-elements.js"></script>
+  </head>
+
+  <body>
+    <wave-pages id="akc"></wave-pages>
+
+    <noscript>
+      <h3>Так вышло, что для работы сайта необходим JavaScript</h3>
+      <p style="max-width: 20rem;">
+        Или включите JavaScript в своём браузере,
+        или подождите, когда будет готов серверный
+        рендеринг (ждать можно долго... но можно и не дождаться...)
+      </p>
+    </noscript>
+  </body>
+</html>
